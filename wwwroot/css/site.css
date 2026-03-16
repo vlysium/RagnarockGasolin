@@ -1,3 +1,10 @@
+/* colors */
+:root {
+  --bs-primary: #fae67a;
+  --bs-primary-rgb: 250, 230, 122;
+}
+
+/* global */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
