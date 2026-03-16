@@ -41,3 +41,15 @@ img {
   height: auto;
   object-fit: cover;
 }
+
+/* carousel */
+.band-member-content {
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.carousel-img {
+  aspect-ratio: 5 / 3;
+}
