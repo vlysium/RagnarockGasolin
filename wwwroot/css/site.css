@@ -7,7 +7,7 @@
   --bs-body-rgb: 9, 7, 0;
 
   --bs-body-color: #fdf7d0;
-  
+
 }
 
 /* global */
@@ -68,6 +68,11 @@ img {
 
 .carousel-img {
   aspect-ratio: 5 / 3;
+}
+
+.qrcode-image {
+  max-width: 16rem;
+  border-radius: 1rem;
 }
 
 /* obects */
