@@ -9,6 +9,12 @@
   --bs-body-color: #fdf7d0;
   --bs-body-color-rgb: 253 247 208;
 }
+/* fonts */
+.limelight {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* global */
 *, *::before, *::after {
