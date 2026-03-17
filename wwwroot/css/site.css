@@ -151,6 +151,11 @@ img {
   }
 }
 
+/*CARDS*/
+.card .btn{
+    margin-top: auto;
+}
+
 /* obects ________________________________________________________________________________*/
 .title {
     max-width: 1000px;
@@ -159,7 +164,16 @@ img {
     position: relative;
 }
 
+.objects-section .grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px; /* Adds space between the photo and text */
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the section on the page */
+}
 .objects-section {
+    
     display: flex; /* This aligns children side-by-side */
     align-items: center; /* Vertically centers the text against the photo */
     gap: 20px; /* Adds space between the photo and text */
