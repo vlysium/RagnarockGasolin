@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">RagnarockGasolin</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -27,6 +27,30 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> *@
+        <nav class="navbar navbar-expand-lg bg-body-black fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="Index">
+                    <img src="~/images/gasolin-logo.jpg" class="logo" alt="Gasolin slogan"/>
+                    Ragnarock Gasolin                 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="historie">History</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="members">Members</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Obects">Exhibition</a>
                         </li>
                     </ul>
                 </div>

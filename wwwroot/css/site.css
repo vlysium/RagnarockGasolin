@@ -1,13 +1,13 @@
 /* colors */
 :root {
   --bs-primary: #fae67a;
-  --bs-primary-rgb: 250, 230, 122;
+  --bs-primary-rgb: 250 230 122;
 
   --bs-body-bg: #090700;
-  --bs-body-rgb: 9, 7, 0;
+  --bs-body-rgb: 9 7 0;
 
   --bs-body-color: #fdf7d0;
-
+  --bs-body-color-rgb: 253 247 208;
 }
 
 /* global */
@@ -39,8 +39,16 @@ html {
   min-height: 100%;
 }
 
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
 body {
-  margin-bottom: 60px;
+    padding-top: 110px;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -52,10 +60,43 @@ body {
   text-align: start;
 }
 
+/*NAV BAR______________________________________________________*/
+.navbar-brand {
+  color: var(--bs-body-color);
+  transition: opacity 150ms;
+  
+
+  &:hover, &:focus {
+    color: var(--bs-body-color);
+    opacity: 0.8;
+  }
+}
+
+.nav-link {
+    color: var(--bs-body-color);
+    transition: opacity 150ms;
+
+   
+    &:hover, &:focus {
+        color: var(--bs-body-color);
+        opacity: 0.8;
+    }
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--bs-body-color);
+    font-weight: 500;
+
+    }
+
+.logo{
+    width: 150px;}
+/* NAV BAR END___________________________________________________*/
+
 img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* carousel */
@@ -75,7 +116,7 @@ img {
   border-radius: 1rem;
 }
 
-/* obects */
+/* obects ________________________________________________________________________________*/
 
 .objects-section {
     display: flex; /* This aligns children side-by-side */
@@ -98,6 +139,7 @@ img {
 
 .text-container {
     flex: 1; /* Takes up the other 50% */
+    
 }
 
 /* Responsive Hack: Stack them on mobile devices */
@@ -107,15 +149,19 @@ img {
     }
 }
 
-
-.height-50 {
-    height: 700px !important;
-    object-position: center;
-    
+.card-img-top {
+    width: 100%; /* Ensure it spans the card width */
+    aspect-ratio: 4 / 3; /* Forces the 4:3 shape */
+    object-fit: cover; /* Crops the image slightly so it doesn't look squashed */
+    object-position: center; /* Ensures the middle of the guitar is visible */
 }
 
-.img-300 {
-    width: 300px;
-    height: 300px;
+
+hund
+
+height-50 {
+    aspect-ratio: 3/1!important;
     object-fit: cover;
 }
+
+}kat
