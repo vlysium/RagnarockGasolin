@@ -92,6 +92,7 @@ img {
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -100,8 +101,19 @@ img {
 }
 
 .qrcode-image {
-  max-width: 16rem;
+  max-width: 12rem;
   border-radius: 1rem;
+}
+
+/* band members biography */
+.biography-grid {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* obects ________________________________________________________________________________*/
