@@ -39,8 +39,16 @@ html {
   min-height: 100%;
 }
 
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
 body {
-  margin-bottom: 60px;
+    padding-top: 110px;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -52,9 +60,11 @@ body {
   text-align: start;
 }
 
+/*NAV BAR______________________________________________________*/
 .navbar-brand {
   color: var(--bs-body-color);
   transition: opacity 150ms;
+  
 
   &:hover, &:focus {
     color: var(--bs-body-color);
@@ -79,15 +89,15 @@ body {
 
     }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/*NAV BAR*/
 .logo{
     width: 150px;}
+/* NAV BAR END___________________________________________________*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 /* carousel */
 .band-member-content {
