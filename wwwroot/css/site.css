@@ -63,19 +63,21 @@ body {
 }
 
 .nav-link {
-  color: var(--bs-body-color);
-  transition: opacity 150ms;
-
-  &:hover, &:focus {
     color: var(--bs-body-color);
-    opacity: 0.8;
-  }
+    transition: opacity 150ms;
+
+   
+    &:hover, &:focus {
+        color: var(--bs-body-color);
+        opacity: 0.8;
+    }
 }
 
 .navbar-nav .nav-link.active {
-  color: var(--bs-body-color);
-  font-weight: 500;
-}
+    color: var(--bs-body-color);
+    font-weight: 500;
+
+    }
 
 img {
   max-width: 100%;
