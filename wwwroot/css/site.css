@@ -23,9 +23,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bs-primary);
 }
 
-p{
-
-}
 
 /* global */
 *, *::before, *::after {
@@ -76,7 +73,7 @@ header{
     background-color: black;
     position:sticky;
     top:0;
-    z-index:999;
+    z-index:999;  
 }
 
 body {
@@ -169,12 +166,11 @@ img {
   }
 }
 
-/*CARDS*/
+/*CARDS and objects*/
 .card .btn{
     margin-top: auto;
 }
 
-/* obects ________________________________________________________________________________*/
 .title {
     max-width: 1000px;
     margin: 0 auto;
@@ -192,8 +188,7 @@ img {
 
 .cards-section {
     display: grid; /* This aligns children side-by-side */
-    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-    /* align-items: center; Vertically centers the text against the photo */
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));    
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
     max-width: 1000px;
