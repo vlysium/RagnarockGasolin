@@ -9,6 +9,12 @@
   --bs-body-color: #fdf7d0;
   --bs-body-color-rgb: 253 247 208;
 }
+/* fonts */
+.limelight {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* global */
 *, *::before, *::after {
@@ -75,6 +81,7 @@ body {
 
 .nav-link {
     color: var(--bs-body-color);
+    font-weight:500;
     transition: opacity 150ms;
 
    
@@ -105,6 +112,7 @@ img {
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -113,8 +121,19 @@ img {
 }
 
 .qrcode-image {
-  max-width: 16rem;
+  max-width: 12rem;
   border-radius: 1rem;
+}
+
+/* band members biography */
+.biography-grid {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* obects ________________________________________________________________________________*/
@@ -165,11 +184,12 @@ img {
 
 
 
-/*OBJECTS END_____________________________________________________________________________________*/
 
 
-height-50 {
-    aspect-ratio: 3/1!important;
+
+.img-300 {
+    height: 300px;
+    width: 300px;
     object-fit: cover;
 }
 
