@@ -58,6 +58,10 @@ img {
   object-fit: cover;
 }
 
+/*NAV BAR*/
+.logo{
+    width: 150px;}
+
 /* carousel */
 .band-member-content {
   @media (min-width: 992px) {
