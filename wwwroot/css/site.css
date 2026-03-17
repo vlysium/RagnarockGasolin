@@ -36,8 +36,23 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-body-bg);
+  --bs-btn-hover-bg: var(--bs-body-color);
+  --bs-btn-hover-border-color: var(--bs-body-color);
+  --bs-btn-active-color: var(--bs-body-bg);
+  --bs-btn-active-bg: var(--bs-body-color);
+  --bs-btn-active-border-color: var(--bs-body-color);
+  --bs-btn-disabled-color: unset;
+  --bs-btn-disabled-bg: unset;
+  --bs-btn-disabled-border-color: unset;
+
+  color: var(--bs-body-bg);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
 }
 
 html {
@@ -46,6 +61,7 @@ html {
 }
 
 header{
+    background-color: black;
     position:sticky;
     top:0;
     z-index:999;
@@ -80,6 +96,7 @@ body {
 
 .nav-link {
     color: var(--bs-body-color);
+    font-weight:500;
     transition: opacity 150ms;
 
    
@@ -96,7 +113,13 @@ body {
     }
 
 .logo{
-    width: 150px;}
+    width: 150px;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(1000%) sepia();
+}
+
 /* NAV BAR END___________________________________________________*/
 
 img {
@@ -134,11 +157,23 @@ img {
   }
 }
 
+/*CARDS*/
+.card .btn{
+    margin-top: auto;
+}
+
 /* obects ________________________________________________________________________________*/
+.title {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-inline: 40px;
+    position: relative;
+}
 
 .objects-section {
-    display: flex; /* This aligns children side-by-side */
-    align-items: center; /* Vertically centers the text against the photo */
+    display: grid; /* This aligns children side-by-side */
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: center; Vertically centers the text against the photo */
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
     max-width: 1000px;
