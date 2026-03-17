@@ -113,7 +113,13 @@ body {
     }
 
 .logo{
-    width: 150px;}
+    width: 150px;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(1000%) sepia();
+}
+
 /* NAV BAR END___________________________________________________*/
 
 img {
