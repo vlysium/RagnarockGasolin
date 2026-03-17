@@ -36,8 +36,23 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-body-bg);
+  --bs-btn-hover-bg: var(--bs-body-color);
+  --bs-btn-hover-border-color: var(--bs-body-color);
+  --bs-btn-active-color: var(--bs-body-bg);
+  --bs-btn-active-bg: var(--bs-body-color);
+  --bs-btn-active-border-color: var(--bs-body-color);
+  --bs-btn-disabled-color: unset;
+  --bs-btn-disabled-bg: unset;
+  --bs-btn-disabled-border-color: unset;
+
+  color: var(--bs-body-bg);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
 }
 
 html {
