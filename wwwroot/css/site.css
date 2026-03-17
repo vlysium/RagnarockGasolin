@@ -1,13 +1,13 @@
 /* colors */
 :root {
   --bs-primary: #fae67a;
-  --bs-primary-rgb: 250, 230, 122;
+  --bs-primary-rgb: 250 230 122;
 
   --bs-body-bg: #090700;
-  --bs-body-rgb: 9, 7, 0;
+  --bs-body-rgb: 9 7 0;
 
   --bs-body-color: #fdf7d0;
-
+  --bs-body-color-rgb: 253 247 208;
 }
 
 /* global */
@@ -50,6 +50,31 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.navbar-brand {
+  color: var(--bs-body-color);
+  transition: opacity 150ms;
+
+  &:hover, &:focus {
+    color: var(--bs-body-color);
+    opacity: 0.8;
+  }
+}
+
+.nav-link {
+  color: var(--bs-body-color);
+  transition: opacity 150ms;
+
+  &:hover, &:focus {
+    color: var(--bs-body-color);
+    opacity: 0.8;
+  }
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--bs-body-color);
+  font-weight: 500;
 }
 
 img {
