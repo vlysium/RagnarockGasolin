@@ -12,8 +12,19 @@
 /* fonts */
 .limelight {
   font-family: "Limelight", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+}
+
+.young-serif {
+  font-family: "Young Serif", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Young Serif", serif;
+  color: var(--bs-primary);
+}
+
+p{
+
 }
 
 /* global */
@@ -172,7 +183,7 @@ img {
 }
 .objects-grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
     max-width: 1000px;
@@ -181,7 +192,7 @@ img {
 
 .cards-section {
     display: grid; /* This aligns children side-by-side */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     /* align-items: center; Vertically centers the text against the photo */
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
@@ -190,18 +201,18 @@ img {
 }
 
 .image-container {
-    flex: 1;  Takes up 50% of the space 
+    flex: 1;  /* Takes up 50% of the space */
 }
 
 .text-container {
     flex: 1;
-    takes up the other 50%
+    /* takes up the other 50% */
 }
-    .image-container img {
-        width: 100%; /* Makes the image responsive */
-        height: auto;
-        border-radius: 8px;
-    }
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px;
+}
 
 
 /* Responsive Hack: Stack them on mobile devices */
@@ -218,7 +229,14 @@ img {
     object-position: center; /* Ensures the middle of the guitar is visible */
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
 
+  .btn {
+    width: fit-content;
+  }
+}
 
 
 
