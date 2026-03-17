@@ -75,7 +75,7 @@ img {
   border-radius: 1rem;
 }
 
-/* obects */
+/* obects ________________________________________________________________________________*/
 
 .objects-section {
     display: flex; /* This aligns children side-by-side */
@@ -98,6 +98,7 @@ img {
 
 .text-container {
     flex: 1; /* Takes up the other 50% */
+    
 }
 
 /* Responsive Hack: Stack them on mobile devices */
@@ -106,6 +107,17 @@ img {
         flex-direction: column;
     }
 }
+
+.card-img-top {
+    width: 100%; /* Ensure it spans the card width */
+    aspect-ratio: 4 / 3; /* Forces the 4:3 shape */
+    object-fit: cover; /* Crops the image slightly so it doesn't look squashed */
+    object-position: center; /* Ensures the middle of the guitar is visible */
+}
+
+
+
+/*OBJECTS END_____________________________________________________________________________________*/
 
 
 height-50 {
