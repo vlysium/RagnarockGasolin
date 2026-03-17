@@ -157,11 +157,13 @@ img {
 }
 
 
-hund
 
-height-50 {
-    aspect-ratio: 3/1!important;
+
+
+
+.img-300 {
+    height: 300px;
+    width: 300px;
     object-fit: cover;
 }
 
-}kat
