@@ -108,11 +108,14 @@ img {
 }
 
 
-hund
-
-height-50 {
-    aspect-ratio: 3/1!important;
-    object-fit: cover;
+.height-50 {
+    height: 700px !important;
+    object-position: center;
+    
 }
 
-kat
+.img-300 {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
