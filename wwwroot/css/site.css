@@ -218,7 +218,14 @@ img {
     object-position: center; /* Ensures the middle of the guitar is visible */
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
 
+  .btn {
+    width: fit-content;
+  }
+}
 
 
 
