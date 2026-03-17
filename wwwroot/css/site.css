@@ -58,6 +58,7 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  scroll-padding-top: 110px;
 }
 
 header{
