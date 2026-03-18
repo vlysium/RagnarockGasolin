@@ -72,17 +72,17 @@ html {
   scroll-padding-top: 110px;
 }
 
-header{
-    background-color: black;
-    position:sticky;
-    top:0;
-    z-index:999;
+body {
+	/* padding-top: 110px;
+	margin-bottom: 60px;
+	position: relative; */
 }
 
-body {
-    padding-top: 110px;
-    margin-bottom: 60px;
-    position: relative;
+header{
+	/* background-color: black;
+	position:sticky;
+	top:0;
+	z-index:999; */
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -119,13 +119,21 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--bs-body-color);
-    font-weight: 500;
+  color: var(--bs-body-color);
+  font-weight: 500;
+}
 
-    }
+.navbar-nav .nav-link.show {
+	color: var(--bs-body-color);
+}
 
-.logo{
-    width: 150px;
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--bs-body-bg);
+  background-color: var(--bs-body-color);
+}
+
+.logo {
+  width: 150px;
 }
 
 .navbar-toggler-icon {
@@ -135,9 +143,9 @@ body {
 /* NAV BAR END___________________________________________________*/
 
 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* carousel */
