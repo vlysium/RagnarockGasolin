@@ -216,3 +216,52 @@
     </div>
 </section>
 @* BANDMEMBERS SECTION END _______________________________ *@
+
+@{
+    var greeting =  $"Velkommen til Ragnerocks Gasolin' udstilling! Oplev bandets rejse igennem historien, lær medlemmerne at kende eller dyk ned i de ikoniske elementer i udstillingen. God fest!";    
+    int hour = DateTime.Now.Hour;
+}
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">BESKED FRA ARRANGØRERNE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="discrete">Klokken er nu: @DateTime.Now.ToString("HH:mm")</p>
+        <p>@greeting!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@* Java  *@
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
+
+    if (!hasSeenPopup) {
+      // 1. initialiserer Bootstrap modalen
+      var modalElement = document.getElementById('myModal');
+      var myModal = new bootstrap.Modal(modalElement);
+      
+      // 2. viser vores modal
+      myModal.show();
+
+      // 3. indsætter timer, så den forsvinder af sig selv
+      setTimeout(function() {
+        myModal.hide();
+      }, 10000); 
+
+      // 4. Mark as seen so it doesn't pop up on every refresh
+      localStorage.setItem('hasSeenWelcomePopup', 'true');
+    }
+  });
+</script>
