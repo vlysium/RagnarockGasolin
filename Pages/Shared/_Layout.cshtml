@@ -19,53 +19,51 @@
     
 
 </head>
-<body>
-    <div>
-        <header class="sticky-top bg-black">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand limelight" href="/">
-                        <img src="~/images/gas-logo2.png" class="logo" alt="Gasolin slogan"/>
-                        <span class="d-none d-sm-inline">Ragnarock GASOLIN'</span>             
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Historyaboutband1">History</a>
+<body class="d-flex flex-column">
+    <header class="sticky-top bg-black">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand limelight" href="/">
+                    <img src="~/images/gas-logo2.png" class="logo" alt="Gasolin slogan"/>
+                    <span class="d-none d-sm-inline">Ragnarock GASOLIN'</span>             
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Historyaboutband1">History</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Members
+                            </a>
+                            <ul class="dropdown-menu bg-black">
+                                <li><a class="dropdown-item" href="/KimLarsen">Kim Larsen</a></li>
+                                <li><a class="dropdown-item" href="/WiliJoensson">Wili Joensson</a></li>
+                                <li><a class="dropdown-item" href="/FranzBeckerlee">Franz Beckerlee</a></li>
+                                <li><a class="dropdown-item" href="/SoerenBerlev">Søren Berlev</a></li>
+                            </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="/#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Members
-                                </a>
-                                <ul class="dropdown-menu bg-black">
-                                    <li><a class="dropdown-item" href="/KimLarsen">Kim Larsen</a></li>
-                                    <li><a class="dropdown-item" href="/WiliJoensson">Wili Joensson</a></li>
-                                    <li><a class="dropdown-item" href="/FranzBeckerlee">Franz Beckerlee</a></li>
-                                    <li><a class="dropdown-item" href="/SoerenBerlev">Søren Berlev</a></li>
-                                </ul>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Obects">Exhibition</a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Obects">Exhibition</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
 
-        <footer class="bg-white text-black text-lg-start">
-            <p class="p-3 text-center">
-                &copy; All Rights Reserved 2026, Danmarks Rockmuseum
-            </p>
-        </footer>
-    </div>
+    <footer class="bg-white text-black text-lg-start">
+        <p class="p-3 text-center mb-0">
+            &copy; All Rights Reserved 2026, Danmarks Rockmuseum
+        </p>
+    </footer>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

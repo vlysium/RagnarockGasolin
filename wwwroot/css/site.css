@@ -30,19 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-html, body {
-    height: 100%;
-}
-
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+/* html, body {
+  height: 100%;
+} */
 
 .btn-primary {
   --bs-btn-bg: var(--bs-primary);
@@ -73,6 +63,7 @@ body {
 	/* padding-top: 110px;
 	margin-bottom: 60px;
 	position: relative; */
+	min-height: 100svh;
 }
 
 header{
@@ -80,6 +71,10 @@ header{
 	position:sticky;
 	top:0;
 	z-index:999; */
+}
+
+footer {
+	margin-top: auto;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
