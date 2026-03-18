@@ -75,66 +75,6 @@
 
 </div>
 
-@{
-    var greeting = "Velkommen til Ragnerocks Gasolin' udstilling! Oplev bandets rejse igennem historien, lær medlemmerne at kende eller dyk ned i de ikoniske elementer i udstillingen. God fest!";    
-    int hour = DateTime.Now.Hour;
-}
 
-@if (hour < 12)
-{
-    <p>God morgen!</p>
-}
-else if (hour > 12 && hour <18)
-{
-    <p>God eftermiddag!</p>
-}
-else{
-    <p>God aften!</p>
-}
-@* <p>@greeting!</p>
-<p >Klokken er nu: @DateTime.Now.ToString("HH:mm")</p> *@
-
-
-<div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">BESKED FRA ARRANGØRERNE</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="discrete">Klokken er nu: @DateTime.Now.ToString("HH:mm")</p>
-        <p>@greeting!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-/*JavaScript*/
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
-
-    if (!hasSeenPopup) {
-      // 1. Initialize the Bootstrap modal
-      var modalElement = document.getElementById('myModal');
-      var myModal = new bootstrap.Modal(modalElement);
-      
-      // 2. Show the modal
-      myModal.show();
-
-      // 3. Set a timer to hide it after 60 seconds (60,000 ms)
-      setTimeout(function() {
-        myModal.hide();
-      }, 10000); 
-
-      // 4. Mark as seen so it doesn't pop up on every refresh
-      localStorage.setItem('hasSeenWelcomePopup', 'true');
-    }
-  });
-</script>
 
 @* CARDS SECTION END *@
