@@ -264,3 +264,9 @@ img {
     object-fit: cover;
 }
 
+/*this locks the aspect ratio and makes the image responsive*/
+.carousel-img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes the bottom margin/gap */
+}
