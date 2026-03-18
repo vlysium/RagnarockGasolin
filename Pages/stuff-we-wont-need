@@ -59,3 +59,54 @@ else{
     }
   });
 </script>
+
+
+VED CAROUSEL:
+
+HVIS vi kun har et billedet der skal positioneres med position-object: 50% 25%; 
+<img src="billedet" class="d-block w-100 pin-top" alt="...">
+
+og 
+
+.pin-top {
+    object-position: 50% 25% !important;
+}
+
+
+
+/* 1. Force all carousel images to the same height and prevent stretching */
+.carousel-item img {
+    height: 500px;         /* Fixed height for desktop */
+    width: 100%;           /* Full width */
+    object-fit: cover;     /* Crops instead of stretching */
+    object-position: top;  /* Ensures the top of the photo isn't cut off */
+}
+
+/* 2. Responsive height for mobile devices */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;     /* Shorter height for phones */
+    }
+}
+
+/* 3. The Dark Gradient Overlay */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Fade from transparent at top to 70% black at bottom */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none; /* Allows user to click "Next/Prev" arrows through the overlay */
+}
+
+/* 4. Make sure text sits on top of the gradient */
+.carousel-caption {
+    z-index: 2;
+}
+Læs om Gasolin's utrolige rejse
+  <p>Fra Christianshavn til Stjernerne! ⚡ Oplev den vilde rejse fra flisebøjer til landets største rockikoner.</p>
+<p>Succes, bajere og ren rockmagi 🤘 Opdag hvordan Gasolin' ændrede dansk musik for altid</p
+ 
