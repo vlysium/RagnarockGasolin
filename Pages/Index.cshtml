@@ -153,10 +153,13 @@
             {
                 <div class="carousel-item@(i == 0 ? " active" : "")"> @* insert active class to first carousel item only *@
                     <div class="band-member-content">
-                        <img src="~/images/@(Model.BandMembers[i].PersonImgSrc)" class="carousel-img d-block w-100 rounded-2" alt="@(Model.BandMembers[i].Name)">
+                        <img
+                            src="~/images/@(Model.BandMembers[i].PersonImgSrc)" class="carousel-img d-block w-100 rounded-2"
+                            alt="@(Model.BandMembers[i].Name)"
+                        >
                         <div class="d-flex flex-column align-items-center justify-content-around">
                             <h3 class="fs-3">@(Model.BandMembers[i].Name)</h3>
-                            <a href="KimLarsen" class="d-flex flex-column align-items-center text-decoration-none text-primary">
+                            <a href="@(Model.BandMembers[i].Href)" class="d-flex flex-column align-items-center text-decoration-none text-primary">
                                 <img class="qrcode-image" src="~/images/@(Model.BandMembers[i].QrCodeImgSrc)" alt="">
                                 <small>Scan QR-koden for at læse om @(Model.BandMembers[i].Name)s biografi</small>
                             </a>
