@@ -30,19 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-html, body {
-    height: 100%;
-}
-
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+/* html, body {
+  height: 100%;
+} */
 
 .btn-primary {
   --bs-btn-bg: var(--bs-primary);
@@ -69,17 +59,22 @@ html {
   scroll-padding-top: 110px;
 }
 
-header{
-    background-color: black;
-    position:sticky;
-    top:0;
-    z-index:999;  
+body {
+	/* padding-top: 110px;
+	margin-bottom: 60px;
+	position: relative; */
+	min-height: 100svh;
 }
 
-body {
-    padding-top: 110px;
-    margin-bottom: 60px;
-    position: relative;
+header{
+	/* background-color: black;
+	position:sticky;
+	top:0;
+	z-index:999; */
+}
+
+footer {
+	margin-top: auto;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -116,13 +111,21 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--bs-body-color);
-    font-weight: 500;
+  color: var(--bs-body-color);
+  font-weight: 500;
+}
 
-    }
+.navbar-nav .nav-link.show {
+	color: var(--bs-body-color);
+}
 
-.logo{
-    width: 150px;
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--bs-body-bg);
+  background-color: var(--bs-body-color);
+}
+
+.logo {
+  width: 150px;
 }
 
 .navbar-toggler-icon {
@@ -132,9 +135,9 @@ body {
 /* NAV BAR END___________________________________________________*/
 
 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* carousel */
@@ -153,6 +156,19 @@ img {
 .qrcode-image {
   max-width: 12rem;
   border-radius: 1rem;
+}
+
+.interview-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 2rem;
+}
+
+.interview-video {
+	width: min(100%, 40rem);
+	aspect-ratio: 560 / 315;
 }
 
 /* band members biography */
