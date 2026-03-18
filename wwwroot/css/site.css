@@ -23,9 +23,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bs-primary);
 }
 
+/* 
 .discrete{
   color:gray;
-}
+} */
+
 /* global */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -302,3 +304,17 @@ img {
 .carousel-caption {
     z-index: 2;
 }
+
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.1)
+}
+#modal-body-1 p {
+  display: inline;
+  margin-bottom:5px;
+  padding:0 ;
+}
+
+/* 
+.btn-close {
+    --bs-btn-close-color: #fae67a;
+} */
