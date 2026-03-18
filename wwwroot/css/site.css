@@ -8,7 +8,13 @@
 
   --bs-body-color: #fdf7d0;
   --bs-body-color-rgb: 253 247 208;
+
+  --bs-accent-rbg: 170 145 78;
+  --bs-accent-gold: #AA914E;
+
+ 
 }
+
 /* fonts */
 .limelight {
   font-family: "Limelight", sans-serif;
@@ -23,10 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bs-primary);
 }
 
-/* 
-.discrete{
-  color:gray;
-} */
 
 /* global */
 *, *::before, *::after {
@@ -70,12 +72,6 @@ body {
 	min-height: 100svh;
 }
 
-header{
-	/* background-color: black;
-	position:sticky;
-	top:0;
-	z-index:999; */
-}
 
 footer {
 	margin-top: auto;
@@ -107,7 +103,8 @@ small {
 }
 
 .nav-link {
-    color: var(--bs-body-color);
+    color: var(--bs-accent-gold);
+    font-family: "Limelight", sans-serif;
     font-weight:500;
     transition: opacity 150ms;
 
@@ -210,7 +207,14 @@ img {
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
     max-width: 1000px;
-    margin: 0 auto; /* Centers the section on the page */
+    margin: 0 auto; /* Centers the section on the page */    
+}
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: 100%;
+    object-fit:cover;
+    display:block; /*removes the tiny gap at the bottom of images*/
+    border-radius: 8px;    
 }
 
 .cards-section {
@@ -221,21 +225,6 @@ img {
     max-width: 1000px;
     margin: 0 auto; /* Centers the section on the page */
 }
-
-.image-container {
-    flex: 1;  /* Takes up 50% of the space */
-}
-
-.text-container {
-    flex: 1;
-    /* takes up the other 50% */
-}
-.image-container img {
-    width: 100%; /* Makes the image responsive */
-    height: auto;
-    border-radius: 8px;
-}
-
 
 /* Responsive Hack: Stack them on mobile devices */
 @media (max-width: 768px) {
@@ -300,7 +289,7 @@ img {
     z-index:1;
   }
 
-/* 4. Make sure text sits on top of the gradient */
+/* Make sure text sits on top of the gradient */
 .carousel-caption {
     z-index: 2;
 }
