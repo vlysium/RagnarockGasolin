@@ -8,7 +8,13 @@
 
   --bs-body-color: #fdf7d0;
   --bs-body-color-rgb: 253 247 208;
+
+  --bs-accent-rbg: 170 145 78;
+  --bs-accent-gold: #AA914E;
+
+ 
 }
+
 /* fonts */
 .limelight {
   font-family: "Limelight", sans-serif;
@@ -23,9 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bs-primary);
 }
 
-p{
-
-}
 
 /* global */
 *, *::before, *::after {
@@ -33,19 +36,9 @@ p{
   margin: 0;
   padding: 0;
 }
-html, body {
-    height: 100%;
-}
-
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+/* html, body {
+  height: 100%;
+} */
 
 .btn-primary {
   --bs-btn-bg: var(--bs-primary);
@@ -72,17 +65,16 @@ html {
   scroll-padding-top: 110px;
 }
 
-header{
-    background-color: black;
-    position:sticky;
-    top:0;
-    z-index:999;
+body {
+	/* padding-top: 110px;
+	margin-bottom: 60px;
+	position: relative; */
+	min-height: 100svh;
 }
 
-body {
-    padding-top: 110px;
-    margin-bottom: 60px;
-    position: relative;
+
+footer {
+	margin-top: auto;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -92,6 +84,10 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+small {
+	font-size: 0.75em;
 }
 
 /*NAV BAR______________________________________________________*/
@@ -107,7 +103,8 @@ body {
 }
 
 .nav-link {
-    color: var(--bs-body-color);
+    color: var(--bs-accent-gold);
+    font-family: "Limelight", sans-serif;
     font-weight:500;
     transition: opacity 150ms;
 
@@ -119,13 +116,21 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--bs-body-color);
-    font-weight: 500;
+  color: var(--bs-body-color);
+  font-weight: 500;
+}
 
-    }
+.navbar-nav .nav-link.show {
+	color: var(--bs-body-color);
+}
 
-.logo{
-    width: 150px;
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--bs-body-bg);
+  background-color: var(--bs-body-color);
+}
+
+.logo {
+  width: 150px;
 }
 
 .navbar-toggler-icon {
@@ -135,17 +140,19 @@ body {
 /* NAV BAR END___________________________________________________*/
 
 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* carousel */
 .band-member-content {
-  @media (min-width: 992px) {
-    display: grid;
+	display: grid;
+	gap: 1rem;
+	
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+		align-items: center;
   }
 }
 
@@ -156,6 +163,19 @@ img {
 .qrcode-image {
   max-width: 12rem;
   border-radius: 1rem;
+}
+
+.interview-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 2rem;
+}
+
+.interview-video {
+	width: min(100%, 40rem);
+	aspect-ratio: 560 / 315;
 }
 
 /* band members biography */
@@ -169,15 +189,15 @@ img {
   }
 }
 
-/*CARDS*/
+/*CARDS and objects*/
 .card .btn{
     margin-top: auto;
 }
 
-/* obects ________________________________________________________________________________*/
 .title {
     max-width: 1000px;
     margin: 0 auto;
+    padding-top:10px; 
     padding-inline: 40px;
     position: relative;
 }
@@ -187,33 +207,24 @@ img {
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
     max-width: 1000px;
-    margin: 0 auto; /* Centers the section on the page */
+    margin: 0 auto; /* Centers the section on the page */    
+}
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: 100%;
+    object-fit:cover;
+    display:block; /*removes the tiny gap at the bottom of images*/
+    border-radius: 8px;    
 }
 
 .cards-section {
     display: grid; /* This aligns children side-by-side */
-    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-    /* align-items: center; Vertically centers the text against the photo */
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));    
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
     max-width: 1000px;
     margin: 0 auto; /* Centers the section on the page */
 }
-
-.image-container {
-    flex: 1;  /* Takes up 50% of the space */
-}
-
-.text-container {
-    flex: 1;
-    /* takes up the other 50% */
-}
-.image-container img {
-    width: 100%; /* Makes the image responsive */
-    height: auto;
-    border-radius: 8px;
-}
-
 
 /* Responsive Hack: Stack them on mobile devices */
 @media (max-width: 768px) {
@@ -239,11 +250,60 @@ img {
 }
 
 
-
-
 .img-300 {
     height: 300px;
     width: 300px;
     object-fit: cover;
 }
 
+/*låser aspect ratio og gør billedet responsive*/
+.carousel-img-responsive {
+  Height: 500px;
+  object-fit: cover;    /* beskærer i stedet for at strække billedet */
+  max-width: 100%;  
+  display: block; /* fjerner bottom margin/gap */  
+  object-position: 50% 25%; /*vi styrer hvad der beskæres ved at bestemme positionen*/
+}
+
+/* 2. Responsive height for mobile devices */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;     /* Shorter height for phones */
+    }
+}
+
+.carousel-item {
+    position: relative; /* This pins the gradient to the slide */
+}
+/* 3. The Dark Gradient Overlay */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Fade from transparent at top to 70% black at bottom */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none; /* Allows user to click "Next/Prev" arrows through the overlay */
+    z-index:1;
+  }
+
+/* Make sure text sits on top of the gradient */
+.carousel-caption {
+    z-index: 2;
+}
+
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.1)
+}
+#modal-body-1 p {
+  display: inline;
+  margin-bottom:5px;
+  padding:0 ;
+}
+
+/* 
+.btn-close {
+    --bs-btn-close-color: #fae67a;
+} */

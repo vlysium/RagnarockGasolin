@@ -1,0 +1,112 @@
+@{
+    var greeting = "Velkommen til Ragnerocks Gasolin' udstilling! Oplev bandets rejse igennem historien, lær medlemmerne at kende eller dyk ned i de ikoniske elementer i udstillingen. God fest!";    
+    int hour = DateTime.Now.Hour;
+}
+
+@if (hour < 12)
+{
+    <p>God morgen!</p>
+}
+else if (hour > 12 && hour <18)
+{
+    <p>God eftermiddag!</p>
+}
+else{
+    <p>God aften!</p>
+}
+@* <p>@greeting!</p>
+<p >Klokken er nu: @DateTime.Now.ToString("HH:mm")</p> *@
+
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">BESKED FRA ARRANGØRERNE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="discrete">Klokken er nu: @DateTime.Now.ToString("HH:mm")</p>
+        <p>@greeting!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+/*JavaScript*/
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
+
+    if (!hasSeenPopup) {
+      // 1. Initialize the Bootstrap modal
+      var modalElement = document.getElementById('myModal');
+      var myModal = new bootstrap.Modal(modalElement);
+      
+      // 2. Show the modal
+      myModal.show();
+
+      // 3. Set a timer to hide it after 60 seconds (60,000 ms)
+      setTimeout(function() {
+        myModal.hide();
+      }, 10000); 
+
+      // 4. Mark as seen so it doesn't pop up on every refresh
+      localStorage.setItem('hasSeenWelcomePopup', 'true');
+    }
+  });
+</script>
+
+
+VED CAROUSEL:
+
+HVIS vi kun har et billedet der skal positioneres med position-object: 50% 25%; 
+<img src="billedet" class="d-block w-100 pin-top" alt="...">
+
+og 
+
+.pin-top {
+    object-position: 50% 25% !important;
+}
+
+
+
+/* 1. Force all carousel images to the same height and prevent stretching */
+.carousel-item img {
+    height: 500px;         /* Fixed height for desktop */
+    width: 100%;           /* Full width */
+    object-fit: cover;     /* Crops instead of stretching */
+    object-position: top;  /* Ensures the top of the photo isn't cut off */
+}
+
+/* 2. Responsive height for mobile devices */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;     /* Shorter height for phones */
+    }
+}
+
+/* 3. The Dark Gradient Overlay */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Fade from transparent at top to 70% black at bottom */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none; /* Allows user to click "Next/Prev" arrows through the overlay */
+}
+
+/* 4. Make sure text sits on top of the gradient */
+.carousel-caption {
+    z-index: 2;
+}
+Læs om Gasolin's utrolige rejse
+  <p>Fra Christianshavn til Stjernerne! ⚡ Oplev den vilde rejse fra flisebøjer til landets største rockikoner.</p>
+<p>Succes, bajere og ren rockmagi 🤘 Opdag hvordan Gasolin' ændrede dansk musik for altid</p
+ 
