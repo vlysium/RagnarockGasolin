@@ -171,10 +171,13 @@ img {
 	align-items: center;
 	gap: 0.5rem;
 	margin-top: 2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 2rem;
 }
 
 .interview-video {
-	width: min(100%, 40rem);
+	width: 100%;
 	aspect-ratio: 560 / 315;
 }
 
