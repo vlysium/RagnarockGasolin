@@ -208,14 +208,29 @@ img {
     padding: 40px;
     
     margin: 0 auto; /* Centers the section on the page */    
+    align-items:stretch; /*måske fjern den*/
+}
+
+.image-container {
+    width: 100%;
+    height: auto; /* Dette tvinger containeren til at matche tekstens højde */
+    overflow: hidden; /* Holder billedet inde for de 8px border-radius */
+    border-radius: 8px;
+    aspect-ratio: 3/2;   
+    
 }
 .image-container img {
     width: 100%; /* Makes the image responsive */
     height: 100%;
     object-fit:cover;
     display:block; /*removes the tiny gap at the bottom of images*/
-    border-radius: 8px;    
+    border-radius: 8px;  
+    object-position: 50% 15%;  
 }
+#wing img{
+  object-position: center;  
+}
+ 
 
 .cards-section {
     display: grid; /* This aligns children side-by-side */
