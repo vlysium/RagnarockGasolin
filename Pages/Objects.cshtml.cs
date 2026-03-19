@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace RagnarockGasolin.Pages
 {
-    public class historyaboutband1Model : PageModel
+    public class ObjectsModel : PageModel
     {
         public void OnGet()
         {
