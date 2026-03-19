@@ -281,10 +281,14 @@ img {
 }
 
 .card-img-top {
-    width: 100%; /* Ensure it spans the card width */
-    aspect-ratio: 4 / 3; /* Forces the 4:3 shape */
-    object-fit: cover; /* Crops the image slightly so it doesn't look squashed */
-    object-position: center; /* Ensures the middle of the guitar is visible */
+    width: 100%; 
+    aspect-ratio: 5/4; 
+    object-fit: cover; /*beskærer billedet så det passer*/
+    object-position: center; /*sikrer at den valgte value fx billedets center er synlig*/
+}
+
+#gas3{
+  object-position: top !important;
 }
 
 .card-body {
@@ -303,7 +307,6 @@ img {
     object-fit: cover;
 }
 
-/*låser aspect ratio og gør billedet responsive*/
 .carousel-img-responsive {
   Height: 500px;
   object-fit: cover;    /* beskærer i stedet for at strække billedet */
