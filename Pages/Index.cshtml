@@ -232,27 +232,3 @@
     </div>
   </div>
 </div>
-
-@* script til velkomspopup *@
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var hasSeenPopup = localStorage.getItem('hasSeenWelcomePopup');
-
-    if (!hasSeenPopup) {
-      // 1. initialiserer Bootstrap modalen
-      var modalElement = document.getElementById('myModal');
-      var myModal = new bootstrap.Modal(modalElement);
-      
-      // 2. viser vores modal
-      myModal.show();
-
-      @* // 3. indsætter timer, så den forsvinder af sig selv
-      setTimeout(function() {
-        myModal.hide();
-      }, 30000);  *@
-
-      // 4. Mark as seen so it doesn't pop up on every refresh
-      localStorage.setItem('hasSeenWelcomePopup', 'true');
-    }
-  });
-</script>
