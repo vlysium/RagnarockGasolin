@@ -315,7 +315,7 @@ img {
 
   /* AUDIO FILES  */
   .music-button {
-    background-color: var(--bs-accent-gold); /* A nice rock 'n' roll red */
+    background-color: var(--bs-accent-gold);
     color: black;
     padding: 12px 24px;
     border: none;
@@ -324,6 +324,10 @@ img {
     cursor: pointer;
     transition: background 0.3s ease;
     font-size: 1rem;
+
+    &.playing {
+      background-color: var(--bs-body-color);
+    }
   }
 
   .music-button:hover {
