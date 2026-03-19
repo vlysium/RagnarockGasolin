@@ -107,6 +107,7 @@ small {
     font-family: "Young Serif", serif;
     font-weight:500;
     transition: opacity 150ms;
+    font-size:1.2rem;
 
    
     &:hover, &:focus {
@@ -225,13 +226,13 @@ img {
     margin-top: auto;
 }
 
-.title {
-    max-width: 1000px;
-    margin: 0 auto;
+ .title {   
+    
     padding-top:10px; 
     padding-inline: 40px;
-    position: relative;
+    position: relative; 
 }
+
 .objects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
