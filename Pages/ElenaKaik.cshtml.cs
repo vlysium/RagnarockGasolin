@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RagnarockGasolin.wwwroot
+namespace RagnarockGasolin.Pages
 {
-    public class ElenaModel : PageModel
+    public class ElenaKaikModel : PageModel
     {
         public void OnGet()
         {
