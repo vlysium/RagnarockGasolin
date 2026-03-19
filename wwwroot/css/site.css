@@ -267,16 +267,16 @@ img {
 
 /* 2. Responsive height for mobile devices */
 @media (max-width: 768px) {
-    .carousel-item img {
+    .carousel-item.splash img {
         height: 300px;     /* Shorter height for phones */
     }
 }
 
-.carousel-item {
+.carousel-item.splash {
     position: relative; /* This pins the gradient to the slide */
 }
 /* 3. The Dark Gradient Overlay */
-.carousel-item::after {
+.carousel-item.splash::after {
     content: "";
     position: absolute;
     top: 0;
