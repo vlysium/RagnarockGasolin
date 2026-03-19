@@ -206,7 +206,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 20px; /* Adds space between the photo and text */
     padding: 40px;
-    max-width: 1000px;
+    
     margin: 0 auto; /* Centers the section on the page */    
 }
 .image-container img {
