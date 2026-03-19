@@ -376,7 +376,7 @@ img {
 }
   
   .music-button {
-    background-color: var(--bs-accent-gold);
+    background-color: var(--bs-primary);
     color: black;
     padding: 0.5rem 1rem;
     border: none;
