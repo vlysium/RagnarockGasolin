@@ -1,15 +1,15 @@
 /* colors */
 :root {
   --bs-primary: #fae67a;
-  --bs-primary-rgb: 250 230 122;
+  --bs-primary-rgb: 250, 230, 122;
 
   --bs-body-bg: #090700;
-  --bs-body-rgb: 9 7 0;
+  --bs-body-rgb: 9, 7, 0;
 
   --bs-body-color: #fdf7d0;
-  --bs-body-color-rgb: 253 247 208;
+  --bs-body-color-rgb: 253, 247, 208;
 
-  --bs-accent-rbg: 170 145 78;
+  --bs-accent-rbg: 170, 145, 78;
   --bs-accent-gold: #AA914E;
 
  
