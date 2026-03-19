@@ -318,7 +318,7 @@ img {
 
   /* AUDIO FILES  */
 .audio-container-title {
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .audio-buttons-container {
@@ -327,6 +327,8 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom:80px;
+  margin-top:20px;
 }
   
   .music-button {
