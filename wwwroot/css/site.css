@@ -1,15 +1,15 @@
 /* colors */
 :root {
   --bs-primary: #fae67a;
-  --bs-primary-rgb: 250 230 122;
+  --bs-primary-rgb: 250, 230, 122;
 
   --bs-body-bg: #090700;
-  --bs-body-rgb: 9 7 0;
+  --bs-body-rgb: 9, 7, 0;
 
   --bs-body-color: #fdf7d0;
-  --bs-body-color-rgb: 253 247 208;
+  --bs-body-color-rgb: 253, 247, 208;
 
-  --bs-accent-rbg: 170 145 78;
+  --bs-accent-rbg: 170, 145, 78;
   --bs-accent-gold: #AA914E;
 
  
@@ -104,7 +104,7 @@ small {
 
 .nav-link {
     color: var(--bs-accent-gold);
-    font-family: "Limelight", sans-serif;
+    font-family: "Young Serif", serif;
     font-weight:500;
     transition: opacity 150ms;
 
@@ -267,16 +267,16 @@ img {
 
 /* 2. Responsive height for mobile devices */
 @media (max-width: 768px) {
-    .carousel-item img {
+    .carousel-item.splash img {
         height: 300px;     /* Shorter height for phones */
     }
 }
 
-.carousel-item {
+.carousel-item.splash {
     position: relative; /* This pins the gradient to the slide */
 }
 /* 3. The Dark Gradient Overlay */
-.carousel-item::after {
+.carousel-item.splash::after {
     content: "";
     position: absolute;
     top: 0;
