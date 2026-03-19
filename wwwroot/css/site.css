@@ -192,6 +192,34 @@ img {
   }
 }
 
+/* history */
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+
+    .history-text {
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      order: 3;
+    }
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: 2fr 3fr 2fr;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
 /*CARDS and objects*/
 .card .btn{
     margin-top: auto;
