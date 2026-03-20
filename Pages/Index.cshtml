@@ -160,25 +160,25 @@
 
 @* BANDMEMBERS SECTION __________________________________________________ *@
 <section class="container">
-    <h2>Bandmedlemmer</h2>
+    <h2 class="text-center">Bandmedlemmer</h2>
     <div id="carousel-bandmembers" class="carousel slide">
         <div class="carousel-inner">
             @for (int i = 0; i < Model.BandMembers.Length; i++)
             {
                 <div class="carousel-item@(i == 0 ? " active" : "")"> @* insert active class to first carousel item only *@
-                    <div class="band-member-content">
+                    <a class="band-member-content text-decoration-none" href="@(Model.BandMembers[i].Href)">
                         <img
                             src="~/images/@(Model.BandMembers[i].PersonImgSrc)" class="carousel-img d-block w-100 rounded-2"
                             alt="@(Model.BandMembers[i].Name)"
                         >
                         <div class="d-flex flex-column align-items-center justify-content-around">
-                            <a href="@(Model.BandMembers[i].Href)" class="d-flex flex-column align-items-center text-decoration-none text-primary">
+                            <span class="d-flex flex-column align-items-center text-primary">
                                 <span class="young-serif fs-3">@(Model.BandMembers[i].Name)</span>
                                 @* <img class="qrcode-image" src="~/images/@(Model.BandMembers[i].QrCodeImgSrc)" alt="">
                                 <small>Scan QR-koden for at læse om @(Model.BandMembers[i].Name)s biografi</small> *@
-                            </a>
+                            </span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             }
         </div>
