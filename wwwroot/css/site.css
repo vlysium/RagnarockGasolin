@@ -29,6 +29,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bs-primary);
 }
 
+h3{
+  padding-bottom:7px;
+}
 
 /* global */
 *, *::before, *::after {
@@ -300,6 +303,36 @@ img {
   }
 }
 
+/*HISTORIE TIMELINE__________________________________*/
+
+.timeline {
+  position: relative;
+  display: inline-block; /* Or any other layout style you need */
+   padding-bottom:60px;
+  padding-top:40px;
+  max-width:1260px;
+}
+
+.timeline img {
+  display: block;
+  width: 100%;
+  height: auto; /* Ensures the image scales properly */
+  object-position: 50% 50%;
+  object-fit:cover;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  /* OVERLAY GRADIENT */
+  background: linear-gradient(90deg,rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.5) 100%), transparent;
+  z-index: 1; 
+}
+/* HISTORIE TIMELINE SLUT*/
 
 .img-300 {
     height: 300px;
