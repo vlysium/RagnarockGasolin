@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const hasSeenPopup = localStorage.getItem("hasSeenWelcomePopup");
+  const hasSeenPopup = localStorage.getItem("has-seen-welcome-popup");
 
   if (!hasSeenPopup) {
     // 1. initialiserer Bootstrap modalen
-    const modalElement = document.getElementById("myModal");
-    const myModal = new bootstrap.Modal(modalElement);
+    const modalElement = document.getElementById("modal");
+    const modal = new bootstrap.Modal(modalElement);
     
     // 2. viser vores modal
-    myModal.show();
+    modal.show();
 
     // 3. indsætter timer, så den forsvinder af sig selv
     // setTimeout(function() {
@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // }, 30000);
 
     // 4. Mark as seen so it doesn't pop up on every refresh
-    localStorage.setItem("hasSeenWelcomePopup", "true");
+    localStorage.setItem("has-seen-welcome-popup", "true");
   }
 });
