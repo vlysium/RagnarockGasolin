@@ -70,5 +70,36 @@
         </p>
     </footer>
     @await RenderSectionAsync("Scripts", required: false)
+
+    @* VELKOMST POP-UP *@
+    @{
+        string greeting = "og velkommen til Ragnerocks Gasolin' udstilling!";    
+        string greeting2 = "Oplev bandets vilde rejse igennem historien, lær medlemmerne at kende eller dyk ned i de ikoniske elementer i udstillingen. God fest!";
+        int hour = DateTime.Now.Hour;    
+    }
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BESKED FRA ARRANGØRERNE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="margin-bottom: 5px; padding:0;">
+                        @if (hour < 12) {<span>Godmorgen</span>} 
+                        else if (hour >= 12 && hour < 18) {<span>God eftermiddag</span>}
+                        else {<span>Godaften</span>} 
+                        @greeting
+                    </p>
+                    <p>@greeting2</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
