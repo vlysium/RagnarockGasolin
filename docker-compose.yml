@@ -9,10 +9,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080
     networks:
-      - web-proxy
+      - nginx
     restart: unless-stopped
 
 # use reverse proxy container on cloud server
 networks:
-  web-proxy:
+  nginx:
     external: true 
