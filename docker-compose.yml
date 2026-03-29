@@ -2,28 +2,17 @@ services:
   
   ragnarock-gasolin:
     image: vlysiumdev/ragnarock-gasolin:latest
-    restart: unless-stopped
-
+    container_name: ragnarock-gasolin_web
     expose:
       - "8080"
-
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080
-
     networks:
-      - proxy
-
-    labels:
-      - "traefik.enable=true"
-
-      - "traefik.http.routers.gasolin.rule=Host(`gasolin.vlysium.dev`)"
-      - "traefik.http.routers.gasolin.entrypoints=websecure"
-      - "traefik.http.routers.gasolin.tls.certresolver=le"
-
-      - "traefik.http.services.gasolin.loadbalancer.server.port=8080"
+      - web-proxy
+    restart: unless-stopped
 
 # use reverse proxy container on cloud server
 networks:
-  proxy:
+  web-proxy:
     external: true 
