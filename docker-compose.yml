@@ -3,8 +3,6 @@ services:
   ragnarock-gasolin:
     image: vlysiumdev/ragnarock-gasolin:latest
     container_name: ragnarock-gasolin_web
-    expose:
-      - "8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080
