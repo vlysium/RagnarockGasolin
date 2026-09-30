@@ -9,6 +9,7 @@ services:
     networks:
       - nginx
     restart: unless-stopped
+    mem_limit: 96m
 
 # use reverse proxy container on cloud server
 networks:
